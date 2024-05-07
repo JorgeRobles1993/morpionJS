@@ -1,0 +1,79 @@
+body {
+    background-color: #dce6f7; /* Azul claro */
+}
+
+#gameTitle {
+    font-family: "Arial", sans-serif;
+    font-size: 48px;
+    color: #ff5722;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+    position: absolute;
+    top: -3%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#gameContainer {
+    position: relative; /* Establecemos la posición relativa para el contenedor del juego */
+    margin-top: 50px; /* Ajustamos el margen superior */
+    text-align: center; /* Centramos horizontalmente el contenido */
+}
+
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    margin: 20px auto; /* Centramos horizontalmente */
+    max-width: 320px; /* Limitamos el ancho máximo para que no se extienda demasiado en pantallas anchas */
+    grid-gap: 0; /* Quitamos los espacios entre las celdas */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+.cell.X {
+    color: red; /* Color rojo para las X */
+}
+
+.cell.O {
+    color: blue; /* Color azul para las O */
+}
+
+#statusText {
+    font-size: 24px;
+    margin-top: 70px; /* Agregamos un margen superior */
+}
+
+
+#restartBtn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    left: 47%;
+    position: absolute;
+}
+
+#restartBtn:hover {
+    background-color: #e64a19;
+}
